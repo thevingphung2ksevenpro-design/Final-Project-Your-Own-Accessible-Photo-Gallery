@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Interactive Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Bộ Sưu Tập Ảnh Tương Tác Của Tôi</h1>
+
+    <div id="image">
+        Hover over an image below or use Tab key to display here.
+    </div>
+
+    <main class="preview-container">
+        <figure>
+            <img class="preview" src="https://picsum.photos/600/400?random=31" alt="Hệ thống mạch điện tử và vi điều khiển IoT" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+            <figcaption>IoT System</figcaption>
+        </figure>
+
+        <figure>
+            <img class="preview" src="https://picsum.photos/600/400?random=32" alt="Nghệ sĩ đang chơi nhạc cụ truyền thống Đàn Nhị" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+            <figcaption>Đàn Nhị</figcaption>
+        </figure>
+
+        <figure>
+            <img class="preview" src="https://picsum.photos/600/400?random=33" alt="Võ sinh Vovinam thực hiện thế đòn chân tấn công" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+            <figcaption>Vovinam Martial Arts</figcaption>
+        </figure>
+
+        <figure>
+            <img class="preview" src="https://picsum.photos/600/400?random=34" alt="Màn hình máy tính hiển thị mã nguồn C++ và cấu trúc dữ liệu" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+            <figcaption>Software Engineering</figcaption>
+        </figure>
+
+        <figure>
+            <img class="preview" src="https://picsum.photos/600/400?random=35" alt="Không gian thiết kế đồ họa game 3D chuyên nghiệp" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+            <figcaption>3D Game Design</figcaption>
+        </figure>
+
+        <figure>
+            <img class="preview" src="https://picsum.photos/600/400?random=36" alt="Khuôn viên trường đại học công nghệ hiện đại" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+            <figcaption>University Campus</figcaption>
+        </figure>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
