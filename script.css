@@ -1,0 +1,37 @@
+
+window.onload = function() {
+    console.log("Trang web đã tải xong. Bắt đầu cấu hình thuộc tính tabindex...");
+    addTabindexAttributes();
+};
+
+function addTabindexAttributes() {
+    // Lấy tất cả các phần tử có class là 'preview'
+    let images = document.querySelectorAll(".preview");
+    
+    // Sử dụng vòng lặp for để duyệt qua từng tấm ảnh
+    for (let i = 0; i < images.length; i++) {
+        // Tự động thêm thuộc tính tabindex="0" để có thể dùng phím Tab di chuyển qua
+        images[i].setAttribute("tabindex", "0");
+    }
+    console.log("Đã tự động thêm tabindex='0' cho " + images.length + " bức ảnh thành công!");
+}
+
+function upDate(previewPic) {
+    console.log("Sự kiện hiển thị ảnh kích hoạt!");
+    
+    let targetDiv = document.getElementById("image");
+    
+    // Cập nhật chữ và hình nền từ thuộc tính alt và src của ảnh nhỏ
+    targetDiv.innerHTML = previewPic.alt;
+    targetDiv.style.backgroundImage = "url('" + previewPic.src + "')";
+}
+
+function undo() {
+    console.log("Sự kiện khôi phục ảnh kích hoạt!");
+    
+    let targetDiv = document.getElementById("image");
+    
+    // Khôi phục trạng thái ban đầu
+    targetDiv.style.backgroundImage = "url('')";
+    targetDiv.innerHTML = "Hover over an image below or use Tab key to display here.";
+}
